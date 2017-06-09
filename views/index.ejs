@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Front End Test</title>
+        <meta charset="UTF-8">
+        <!-- Demo Styling -->
+        <link type="text/css" href="./stylesheets/style.css" rel="stylesheet" />
+        <link type="text/css" href="./stylesheets/bootstrap.min.css" rel="stylesheet" />
+
+        <!-- Libraries -->
+        <script type="text/javascript" src="./javascripts/jquery.min.js"></script>
+        <script type="text/javascript" src="./javascripts/bootstrap.min.js"></script>
+
+        <!--  App Scripts -->
+        <script src="./javascripts/app.js"></script>
+
+    </head>
+    <body>
+        <div class="col-xs-4 col-md-4 text-center col-left">
+        	<div class="bar-horizontal">
+            	<button class="btn btn-default bar-horizontal" onclick="switchNav(true)">Option</button>
+            </div>
+            <div class="empty-div">
+                &nbsp
+            </div>
+            <div class="bar-horizontal">
+                <h4>Quantity</h4>
+                <span><input type="number" id="quantityCount" onkeyup="value=isNaN(parseFloat(value))?null:value"></input></span>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav text-center">
+            <a href="javascript:void(0)" class="closebtn" onclick="switchNav(false)">&times;</a>
+            <select id="categoryList" class="mid-select" onChange="navigatePage('nxt',true)">
+                <option>A</option>
+                <option>B</option>
+            </select>
+        </div>
+        <div class="col-xs-8 col-md-8 col-right" onclick="switchNav(false)">
+            <div class="" id="right-content">
+
+            </div>
+
+            <div id="right-bottom-nav" class="text-center right-bottom-nav">
+                <b>
+                    <span class = "btnClick"  title="Previous Item(s)" onClick="navigatePage('pre',false)"> < </span> &nbsp&nbsp&nbsp
+                    <span class = "btnClick" title="Next Item(s)" onClick="navigatePage('nxt',false)"> > </span>
+                </b>
+            </div>
+        </div>
+    </body>
+</html>
